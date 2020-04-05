@@ -21,16 +21,25 @@
                          
                     </div>
                         <ul class="main-nav">
-                            <li class="main-nav-element"><a href="/">Strona główna</a></li>
-                            <li class="main-nav-element"><a href="/">Przepisy</a></li>
-                            <li class="main-nav-element"><a href="/">Galeria</a></li>
-                            <li class="main-nav-element"><a href="/">Kontakt</a></li>
+                            <li class="main-nav-element"><a href="#top">Strona główna</a></li>
+                            <li class="main-nav-element"><a href="#recipes">Przepisy</a></li>
+                            <li class="main-nav-element"><a href="#gallery">Galeria</a></li>
+                            <li class="main-nav-element"><a href="#contact">Kontakt</a></li>
                         </ul>
+                        <ul class="main-nav-mobile">
+                            <li class="main-nav-element"><a href="#top">Strona główna</a></li>
+                            <li class="main-nav-element"><a href="#recipes">Przepisy</a></li>
+                            <li class="main-nav-element"><a href="#gallery">Galeria</a></li>
+                            <li class="main-nav-element"><a href="#contact">Kontakt</a></li>
+                        </ul>
+                        <!-- przycisk mobilnego menu -->
+                        <button class="hamburger"></button> 
+                        <!--  -->
                 </div>
             </nav>
         </header>
         <section>
-             <div class="big-pic">
+             <div class="big-pic" id="top">
                 <div class="container">
                     <h1>Restauracja Malina</h1>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus cumque esse, suscipit quasi corrupti sed ratione hic laudantium numquam eum perferendis id reiciendis assumenda non iusto, quisquam fugit magnam ab.</p>
@@ -42,8 +51,8 @@
             </div>
         </section>  
 
-        <section class="section-eat">
-              <div class="container">
+        <section class="section-eat" id="recipes">
+              <div class="container section-eat__articles">
                 <article class="eat-example">
                   
                         <img src="images/img1.jpg" alt="">
@@ -78,7 +87,7 @@
                 </div>
         </section>
 
-        <section class="section-eat">
+        <section class="section-eat" id="gallery">
                 <div class="container">
                   <article class="eat-example">
                           <img src="images/img1.jpg" alt="" class="eat-example_img">
@@ -107,7 +116,7 @@
                  </div> 
           </section>
 
-          <section class="newsletter-section">
+          <section class="newsletter-section" id="contact">
                <div class="container">
                   <div class="newsletter">
                       <h3>Zapisz się do naszego newslettera</h3>
@@ -130,12 +139,14 @@
           </section>
 
           <footer class="footer">
-              <div class="container">          
-                 <div class="logo-footer">
+              <div class="container"> 
+                   <div class="logo-footer">
                      <a href="#" class="logo-footer-link">
                          <img src="images/footer-logo.png" alt="">
                      </a>
                 </div>
+                  <div class="footer-elements">
+                     
                 <div class="footer-lists">
                     <ul>
                         <li class="footer-lists-element"><a href="">Strona domowa</a></li>
@@ -148,10 +159,16 @@
                         <li class="footer-lists-element"><a href="">Aktualności</a></li>
                         <li class="footer-lists-element"><a href="">Polityka cookies</a></li>
                     </ul>
-                    <p>Copyright &copy WAR_FER_W_24</p>
+                    
                 </div>
+                <p>Copyright &copy WAR_FER_W_24</p> 
+                  </div>        
+                 
                </div>
           </footer>
-
+          <button class="scroll-btn" c>
+            <i class="fas fa-arrow-up"></i>
+          </button>
+          <script  src="./js/scripts.js"></script>
     </body>
 </html>
