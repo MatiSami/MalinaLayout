@@ -539,7 +539,7 @@ label {
 
 @media (max-width: 1000px) {
     .scroll-btn {
-        bottom: 20px;
-        right: 20px; 
+        bottom: 35px;
+        right: 103px; 
     }
 }
