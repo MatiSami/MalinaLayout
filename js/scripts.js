@@ -7,8 +7,10 @@ menu.addEventListener('click', () => {
 
     if (menu.classList.contains("hamburger--active")){
         mobileMenu.classList.add("main-nav-mobile--active")
+        mobileMenu.classList.remove("main-nav-mobile--closed")
     } else {
         mobileMenu.classList.remove("main-nav-mobile--active")
+        mobileMenu.classList.add("main-nav-mobile--closed")
     }
 });   
 

@@ -52,6 +52,7 @@ body {
   align-items: center;
 }
 .main-nav-element a {
+  display: block;
   text-decoration: none;
   color: #828d8f;
   padding-left: 30px;
@@ -65,7 +66,7 @@ body {
 /* menu i hamburger menu */
 
 .main-nav-mobile {
-       display: none;   
+      display: none;
 }
 
 .hamburger {
@@ -87,6 +88,7 @@ body {
         background: transparent;
         position: relative;
         transition: 0.3s transform linear;
+        outline: none;
       }
 
       .hamburger:hover {
@@ -118,22 +120,74 @@ body {
       }
       
       .main-nav-mobile--active {
-        display: block;
         position: absolute;
         z-index: 1000;
         top: 100px;
         bottom:0;
-    left:0;
-    right:0;
+        left:0;
+        right:0;
         width: 100%;
         height: 300px;
         background: #fff;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-around; 
+        animation: showUp 0.6s;
       }
-}
+      
+      @keyframes showUp {
+          0% {
+              height: 0;
+          }
+      
+          100% {
+              height: 300px;
+          }
+      }
+
+      .main-nav-mobile--closed {
+        display: none;
+        position: absolute;
+        z-index: 1000;
+        top: 100px;
+        bottom:0;
+        left:0;
+        right:0;
+        width: 100%;
+        height: 0;
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around; 
+        animation: hide 0.6s;
+      }
+
+      .main-nav-mobile--closed .main-nav-element a{
+        opacity: 0;
+        animation: fadeOut 0.3s;
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+        @keyframes hide {
+          0% {
+              height: 300px;
+          }
+      
+          100% {
+              height: 0;
+          }
+      }
+    }
 /* głowne zdjecie */
 
 .big-pic {
@@ -203,6 +257,19 @@ body {
 
 .big-pic-arrow i {
   padding-bottom: 50px;
+  animation: bouncing  2s infinite ease-in-out;
+  /* animation-iteration-count: infinite; */
+}
+@keyframes bouncing {
+   0% {
+     padding-bottom: 25px;
+   } 
+   50%{
+     padding-bottom: 50px;
+   }
+   100%{
+     padding-bottom: 25px;
+   }
 }
 
 /* Pierwsza sekcja */
@@ -472,6 +539,7 @@ label {
     }
     .footer-lists {
         justify-content: space-around;
+        width: 350px;
     }
 
     .footer p {
@@ -540,6 +608,6 @@ label {
 @media (max-width: 1000px) {
     .scroll-btn {
         bottom: 35px;
-        right: 103px; 
+        right: 25px; 
     }
 }
